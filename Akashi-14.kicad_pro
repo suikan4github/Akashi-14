@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.6002,
-          "height": 2.1082,
-          "width": 2.1082
+          "drill": 0.0,
+          "height": 4.4958,
+          "width": 2.9972
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -111,7 +111,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.15239999999999998,
+        "min_clearance": 0.1016,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.0,
         "min_hole_clearance": 0.25,
@@ -409,7 +409,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Akashi-13.kicad_pro",
+    "filename": "Akashi-14.kicad_pro",
     "version": 1
   },
   "net_settings": {
