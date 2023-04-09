@@ -1577,7 +1577,7 @@
   (gr_text "D2" (at 152.4 100.965) (layer "F.SilkS") (tstamp 7d72435f-18e3-4463-a485-ce946d75dd00)
     (effects (font (size 1 1) (thickness 0.2) bold) (justify left bottom))
   )
-  (gr_text "Compact Flash for Nucleo" (at 122.682 91.44) (layer "F.SilkS") (tstamp 828b9acd-e83d-4b52-8192-e9370b8f2f94)
+  (gr_text "V1.0.0\nCompact Flash for Nucleo" (at 122.682 91.44) (layer "F.SilkS") (tstamp 828b9acd-e83d-4b52-8192-e9370b8f2f94)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
   )
   (gr_text "A0" (at 108.585 108.585) (layer "F.SilkS") (tstamp 91cbbe02-9c4a-4deb-a7c8-2c3df362fda5)
