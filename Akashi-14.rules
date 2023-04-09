@@ -1,0 +1,194 @@
+
+(rules PCB Akashi-13
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 40)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 5351)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+    (layer_rule In1.Cu
+      (active off)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 0.0)
+      (against_preferred_direction_trace_costs 0.0)
+    )
+    (layer_rule In2.Cu
+      (active off)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 0.0)
+      (against_preferred_direction_trace_costs 0.0)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.0)
+    (clear 125.0 (type smd_to_turn_gap))
+  )
+  (padstack "Via[0-3]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-3]_500:200_um"
+    (shape
+      (circle F.Cu 500.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 500.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 500.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 500.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_500:200_um"
+    (shape
+      (circle F.Cu 500.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 500.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_600:200_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_800:400_um" "Via[0-3]_800:400_um" default
+  )
+  (via 
+    "Via[0-3]_500:200_um" "Via[0-3]_500:200_um" default
+  )
+  (via 
+    "Via[0-3]_800:400_um-kicad_default" "Via[0-3]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_500:200_um-kicad_default" "Via[0-3]_500:200_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_500:200_um" "Via[0-1]_500:200_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_500:200_um-kicad_default" "Via[0-1]_500:200_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:200_um" "Via[0-1]_600:200_um" default
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_600:200_um"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (layer_rule In1.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (layer_rule In2.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND +3.3V "unconnected-(J1-Pin_1-Pad1)" "unconnected-(J1-Pin_2-Pad2)" "unconnected-(J1-Pin_3-Pad3)" "unconnected-(J1-Pin_4-Pad4)" "unconnected-(J1-Pin_5-Pad5)" "unconnected-(J1-Pin_6-Pad6)"
+    "unconnected-(J1-Pin_7-Pad7)" /RD+ "unconnected-(J1-Pin_9-Pad9)" "unconnected-(J1-Pin_10-Pad10)" "unconnected-(J1-Pin_11-Pad11)" "unconnected-(J1-Pin_12-Pad12)" "unconnected-(J1-Pin_13-Pad13)" /nRESET
+    "unconnected-(J1-Pin_15-Pad15)" "unconnected-(J1-Pin_17-Pad17)" "unconnected-(J1-Pin_18-Pad18)" /TD+ "unconnected-(J1-Pin_21-Pad21)" "unconnected-(J1-Pin_23-Pad23)" "unconnected-(J1-Pin_24-Pad24)" "unconnected-(J1-Pin_25-Pad25)"
+    "unconnected-(J1-Pin_26-Pad26)" "unconnected-(J1-Pin_27-Pad27)" "unconnected-(J1-Pin_54-Pad54)" "unconnected-(J1-Pin_29-Pad29)" "unconnected-(J1-Pin_30-Pad30)" "unconnected-(J1-Pin_31-Pad31)" "unconnected-(J1-Pin_56-Pad56)" "unconnected-(J1-Pin_33-Pad33)"
+    "unconnected-(J1-Pin_34-Pad34)" "unconnected-(J1-Pin_35-Pad35)" "unconnected-(J1-Pin_36-Pad36)" "unconnected-(J1-Pin_37-Pad37)" "unconnected-(J1-Pin_38-Pad38)" /A1 "unconnected-(J1-Pin_40-Pad40)" /A2
+    "unconnected-(J1-Pin_42-Pad42)" "unconnected-(J1-Pin_43-Pad43)" "unconnected-(J1-Pin_44-Pad44)" "unconnected-(J1-Pin_45-Pad45)" "unconnected-(J1-Pin_46-Pad46)" "unconnected-(J1-Pin_47-Pad47)" "unconnected-(J1-Pin_48-Pad48)" "unconnected-(J1-Pin_50-Pad50)"
+    /D3 /D2 /D14 "/RD-" "unconnected-(J1-Pin_58-Pad58)" "unconnected-(J1-Pin_59-Pad59)" /D13 "unconnected-(J1-Pin_61-Pad61)"
+    "unconnected-(J1-Pin_62-Pad62)" "unconnected-(J1-Pin_63-Pad63)" "unconnected-(J1-Pin_64-Pad64)" "unconnected-(J1-Pin_65-Pad65)" "unconnected-(J1-Pin_66-Pad66)" "unconnected-(J1-Pin_67-Pad67)" "unconnected-(J1-Pin_68-Pad68)" "unconnected-(J2-Pin_2-Pad2)"
+    "unconnected-(J1-Pin_70-Pad70)" "unconnected-(J2-Pin_1-Pad1)" "unconnected-(J2-Pin_3-Pad3)" "unconnected-(J2-Pin_4-Pad4)" "unconnected-(J2-Pin_5-Pad5)" "unconnected-(J2-Pin_6-Pad6)" "unconnected-(J2-Pin_7-Pad7)" "unconnected-(J2-Pin_8-Pad8)"
+    "/TD-" "unconnected-(J2-Pin_18-Pad18)" "unconnected-(J2-Pin_11-Pad11)" "unconnected-(J2-Pin_12-Pad12)" "unconnected-(J2-Pin_13-Pad13)" "unconnected-(J2-Pin_14-Pad14)" "unconnected-(J2-Pin_15-Pad15)" "unconnected-(J2-Pin_16-Pad16)"
+    "unconnected-(J2-Pin_17-Pad17)" /A5 /A4 /D5 "unconnected-(J2-Pin_21-Pad21)" "unconnected-(J2-Pin_22-Pad22)" "unconnected-(J2-Pin_23-Pad23)" "unconnected-(J2-Pin_24-Pad24)"
+    /D4 "unconnected-(J2-Pin_26-Pad26)" "unconnected-(J2-Pin_27-Pad27)" "unconnected-(J2-Pin_28-Pad28)" "unconnected-(J2-Pin_29-Pad29)" "unconnected-(J2-Pin_30-Pad30)" "unconnected-(J2-Pin_31-Pad31)" /D0
+    "unconnected-(J2-Pin_33-Pad33)" "unconnected-(J2-Pin_34-Pad34)" "unconnected-(J2-Pin_35-Pad35)" /D7 "unconnected-(J2-Pin_37-Pad37)" /D1 /D9 /D11
+    "unconnected-(J2-Pin_41-Pad41)" "unconnected-(J2-Pin_42-Pad42)" "unconnected-(J2-Pin_43-Pad43)" /D6 "unconnected-(J2-Pin_45-Pad45)" /D12 /D10 /D8
+    /A7 "unconnected-(J2-Pin_50-Pad50)" /A3 /A6 /D15 "unconnected-(J2-Pin_60-Pad60)" "unconnected-(J2-Pin_61-Pad61)" "unconnected-(J2-Pin_62-Pad62)"
+    "unconnected-(J2-Pin_64-Pad64)" "unconnected-(J2-Pin_66-Pad66)" "unconnected-(J2-Pin_67-Pad67)" "unconnected-(J2-Pin_68-Pad68)" "unconnected-(J2-Pin_69-Pad69)" "unconnected-(J2-Pin_70-Pad70)" "Net-(J3-Pad9)" "Net-(J3-Pad12)"
+    /IRQ +1V8 "Net-(D1-A)" "/nLNK_ACT" /nSPD100 "/AMDIX_EN" "Net-(U2-DO)" "/EEP_DIO"
+    "/EEP_CLK" "Net-(C19-Pad1)" "Net-(U1-EXRES)" /nFPDLX "/EEP_CS" /WAKEUP "Net-(U1-XTAL1{slash}CLKIN)" /nOE
+    /nWE "unconnected-(J2-Pin_25-Pad25)" /nE1 "unconnected-(U1-XTAL2-Pad54)" "unconnected-(J1-Pin_53-Pad53)"
+    (clearance_class "kicad_default")
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (layer_rule In1.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (layer_rule In2.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

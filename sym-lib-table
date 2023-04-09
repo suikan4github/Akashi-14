@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "LAN9220")(type "KiCad")(uri "${KIPRJMOD}/lib/LAN9220.kicad_sym")(options "")(descr ""))
+  (lib (name "CF_Socket")(type "KiCad")(uri "${KIPRJMOD}/lib/N7E50.kicad_sym")(options "")(descr ""))
+  (lib (name "RJ45")(type "KiCad")(uri "${KIPRJMOD}/lib/J0011D01B.kicad_sym")(options "")(descr "Mojular Jack with Magnetics"))
+)
